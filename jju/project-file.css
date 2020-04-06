@@ -68,12 +68,17 @@ figure img:hover {
     color: #424242;
     width: 400px;
     height: 360px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 60px;
     line-height: 18px;
     font-size: 16px;
-    position: relative;
+    border: 1px solid #D8D8D8;
+}
+
+.explainTop {
+    margin-left: 20px;
+    padding-top: 50px;
+    background-color: lime;
+    height: 270px;
+    margin-right: 20px;
 }
 
 .menuList dl dt {
@@ -89,124 +94,57 @@ figure img:hover {
 }
 
 hr {
-    width: 360px;
-    margin: 15px 0;
+    width: 355px;
+    margin: 15px 0px 15px 0;
     border-top: none;
     border-bottom: 1px solid black;
 }
 
-.menuList .dl__dd2 {
-    width: 360px;
-    height: 100px;
-    text-align: center;
-    background-color: skyblue;
-    overflow: hidden;
-}
-
-.menuList dd p {
-    font-size: 14px;
-}
-
-/* .appMain .blossom,
-.appMain .brownie,
-.appMain .jeju,
-.appMain .pomegranate {
-    display: flex;
-} */
-
-
-/* .appMain div {
-    text-align: center;
-} */
-
-/* section {
-    background-color: #F2F2F2;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    justify-content: center;
-} */
-
-/* section img {
-    transform: scale(1);
-    transition: all 0.3s ease-in-out;
-    margin-top: 20px;
-
-}
-
-section img:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-section h2 {
-    text-align: center;
-}
-
-.explain {
-    background-color: pink;
-    width: 400px;
-    height: 360px;
-    display: block;
-}
-
-.explain dl {
-    margin-left: 20px;
-    width: 350px;
-}
-
-.explain dt {
-    margin-top: 50px;
-    font-size: 18px;
-    text-align: left;
-    line-height: 1.2;
-}
-
-.explain span {
-    font-size: 15px;
-    display: block;
-    color: #848484;
-}
-
-.explain dt::after {
-    content: "";
-    border: 1px solid black;
-    display: flex;
-    width: 350px;
-    margin-top: 15px;
-
-}
-
-.explain dd {
-    margin-top: 15px;
-    display: block;
-    text-align: left;
-    line-height: 1.2;
-
-}
-
 table {
-    background-color: yellow;
-    width: 300px;
-    height: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 13px;
-    display: flex;
-    text-align: left;
-    line-height: 1.6;
+    width: 100%;
+    background-color: skyblue;
+    color: #424242;
+    margin-top: 15px;
 }
 
-.table .left:nth-child(2) {
-    margin-left: 100px;
-} */
+.table__left {
+    width: 135px;
+    height: 60px;
+    margin-left: 35px;
+    font-size: 13px;
+    float: left;
+    display: flex;
+}
 
-/* .buttonNone {
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-} */
-
+.table__left, td:nth-child(1) {
+    text-align: left;
+}
+.table__left td:nth-child(2) {
+    text-align: left;
+    display: block;
+    margin-left: 40px;
+}
+.table__left::after {
+    content: "";
+    height: 60px;
+    border: 0.5px solid #424242 ;
+}
+.table__right {
+    width: 145px;
+    height: 60px;
+    margin-right: 35px;
+    font-size: 13px;
+    float: right;
+    display: flex;
+}
+.table__right, td:nth-child(1) {
+    text-align: left;
+}
+.table__right td:nth-child(2) {
+    text-align: left;
+    display: block;
+    margin-left: 40px;
+}
 /* 공통 메뉴 */
 
 

@@ -63,7 +63,7 @@
                 </li>
                 <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
-                        <div class="img-box"><img aria-labelledby="hotcherry" src="./SVG/Hot/02_hot_Cherry_Blossom_Latte.svg" alt=""></div>
+                        <div class="img-box"><img aria-labelledby="hotcherry" src="./SVG/Hot/02_hot_Cherry_Blossom_Latte.svg" alt="핫 벚꽃라떼"></div>
                         <figcaption id="hotcherry">HOT 벚꽃라떼</figcaption>
                     </figure>
                     <dl>
@@ -93,7 +93,7 @@
                 </li>
                 <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
-                        <div class="img-box"><img aria-labelledby="icebrownie" src="./SVG/Ice/03_Ice_Brownie_Chocolate.svg" alt=""></div>
+                        <div class="img-box"><img aria-labelledby="icebrownie" src="./SVG/Ice/03_Ice_Brownie_Chocolate.svg" alt="아이스 브라우니 쇼콜라"></div>
                         <figcaption id="icebrownie">ICED 브라우니 쇼콜라</figcaption>
                     </figure>
                     <dl>
@@ -123,7 +123,7 @@
                 </li>
                 <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
-                        <div class="img-box"><img aria-labelledby="hotbrownie" src="./SVG/Hot/04_Hot_Brownie_Chocolate.svg" alt=""></div>
+                        <div class="img-box"><img aria-labelledby="hotbrownie" src="./SVG/Hot/04_Hot_Brownie_Chocolate.svg" alt="핫 브라우니 쇼콜라"></div>
                         <figcaption id="hotbrownie">HOT 브라우니 쇼콜라</figcaption>
                     </figure>
                     <dl>
@@ -153,7 +153,7 @@
                 </li>
                 <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
-                        <div class="img-box"><img aria-labelledby="tangerinetea" src="" alt=""></div>
+                        <div class="img-box"><img aria-labelledby="tangerinetea" src="./SVG/Tangerine/05_Jeju_Green_Tangerine_Tea.svg" alt="제주청귤 오리지널"></div>
                         <figcaption id="tangerinetea">제주청귤 오리지널</figcaption>
                     </figure>
                     <dl>
@@ -182,7 +182,7 @@
                 </li>
                 <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
-                        <div class="img-box"><img aria-labelledby="tangerineblossom" src="" alt=""></div>
+                        <div class="img-box"><img aria-labelledby="tangerineblossom" src="./SVG/Tangerine/06-Jeju_Green_Tangerine_Blossom.svg" alt="제주청귤 블라썸"></div>
                         <figcaption id="tangerineblossom">제주청귤 블라썸</figcaption>
                     </figure>
                     <dl>
@@ -212,7 +212,7 @@
                 </li>
                 <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
-                        <div class="img-box"><img aria-labelledby="pomegranatetea" src="" alt=""></div>
+                        <div class="img-box"><img aria-labelledby="pomegranatetea" src="./SVG/Pomegranate/07_Pomegranate_Tea.svg" alt="석류 오리지널"></div>
                         <figcaption id="pomegranatetea">석류 오리지널</figcaption>
                     </figure>
                     <dl>
@@ -242,7 +242,7 @@
                 </li>
                 <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
-                        <div class="img-box"><img aria-labelledby="pomegranateapplelime" src="" alt=""></div>
+                        <div class="img-box"><img aria-labelledby="pomegranateapplelime" src="./SVG/Pomegranate/08_Pomegranate_Apple_Lime.svg" alt="석류 애플라임"></div>
                         <figcaption id="pomegranateapplelime">석류 애플라임</figcaption>
                     </figure>
                     <dl>
@@ -281,8 +281,7 @@
         }
         function closeBtn(e)
         {
-            console.log(e)
-            const ppp = e.target.offsetParent.offsetParent.offsetParent;
+            const ppp = e.target.offsetParent.parentNode;
             ppp.classList.toggle("active");
         }
     </script>

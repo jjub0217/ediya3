@@ -30,13 +30,14 @@
         <h2 class="a11yhidden">메인</h2>
         <section class="container">
             <ul>
-                <li>
+                <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
-                        <div class="img-box"><img aria-labelledby="icecherry" src="./SVG/Ice/01_Ice_Cherry_Blossom_Latte.svg" alt="아이스 벚꽃 라떼"></div>
+                        <div class="img-box"><img  aria-labelledby="icecherry" src="./SVG/Ice/01_Ice_Cherry_Blossom_Latte.svg" alt="아이스 벚꽃 라떼"></div>
                         <figcaption id="icecherry">ICED 벚꽃라떼</figcaption>
                     </figure>
                     <dl>
-                        <button class="close-dl-btn"></button>
+                        <button class="close-dl-btn" onkeypress="if(event.keyCode=='13') {closeBtn(event); return false;}"
+                        onclick="closeBtn(event)">닫는 버튼</button>
                         <dt>
                             <h3>ICED 벚꽃라떼</h3>
                             <p>Cherry Blossom Latte</p>
@@ -60,13 +61,14 @@
                        
                     </dl>
                 </li>
-                <li>
+                <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
                         <div class="img-box"><img aria-labelledby="hotcherry" src="./SVG/Hot/02_hot_Cherry_Blossom_Latte.svg" alt=""></div>
                         <figcaption id="hotcherry">HOT 벚꽃라떼</figcaption>
                     </figure>
                     <dl>
-                        <button class="closedl-btn"></button>
+                        <button class="close-dl-btn" onkeypress="if(event.keyCode=='13') {closeBtn(event); return false;}"
+                        onclick="closeBtn(event)">닫는 버튼</button>
                         <dt>
                             <h3>HOT 벚꽃라떼</h3>
                             <p>Cherry Blossom Latte</p>
@@ -89,13 +91,14 @@
                         </dd>
                     </dl>
                 </li>
-                <li>
+                <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
                         <div class="img-box"><img aria-labelledby="icebrownie" src="./SVG/Ice/03_Ice_Brownie_Chocolate.svg" alt=""></div>
                         <figcaption id="icebrownie">ICED 브라우니 쇼콜라</figcaption>
                     </figure>
                     <dl>
-                        <button class="closedl-btn"></button>
+                        <button class="close-dl-btn" onkeypress="if(event.keyCode=='13') {closeBtn(event); return false;}"
+                        onclick="closeBtn(event)">닫는 버튼</button>
                         <dt>
                             <h3>ICED 브라우니 쇼콜라</h3>
                             <p>Brownie Chocolate</p>
@@ -118,13 +121,14 @@
                         </dd>
                     </dl>
                 </li>
-                <li>
+                <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
                         <div class="img-box"><img aria-labelledby="hotbrownie" src="./SVG/Hot/04_Hot_Brownie_Chocolate.svg" alt=""></div>
                         <figcaption id="hotbrownie">HOT 브라우니 쇼콜라</figcaption>
                     </figure>
                     <dl>
-                        <button class="close-dl-btn"></button>
+                        <button class="close-dl-btn" onkeypress="if(event.keyCode=='13') {closeBtn(event); return false;}"
+                        onclick="closeBtn(event)">닫는 버튼</button>
                         <dt>
                             <h3>HOT 브라우니 쇼콜라</h3>
                             <p>Brownie Chocolate</p>
@@ -147,7 +151,7 @@
                         </dd>
                     </dl>
                 </li>
-                <li>
+                <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
                         <div class="img-box"><img aria-labelledby="tangerinetea" src="" alt=""></div>
                         <figcaption id="tangerinetea">제주청귤 오리지널</figcaption>
@@ -176,13 +180,14 @@
                         </dd>
                     </dl>
                 </li>
-                <li>
+                <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
                         <div class="img-box"><img aria-labelledby="tangerineblossom" src="" alt=""></div>
                         <figcaption id="tangerineblossom">제주청귤 블라썸</figcaption>
                     </figure>
                     <dl>
-                        <button class="closedl-btn"></button>
+                              <button class="close-dl-btn" onkeypress="if(event.keyCode=='13') {closeBtn(event); return false;}"
+                        onclick="closeBtn(event)">닫는 버튼</button>
                         <dt>
                             <h3>Tangerine Blossom</h3>
                             <p>Jeju Green Tangerine Blossom</p>
@@ -205,13 +210,14 @@
                         </dd>
                     </dl>
                 </li>
-                <li>
+                <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
                         <div class="img-box"><img aria-labelledby="pomegranatetea" src="" alt=""></div>
                         <figcaption id="pomegranatetea">석류 오리지널</figcaption>
                     </figure>
                     <dl>
-                        <button class="closedl-btn"></button>
+                              <button class="close-dl-btn" onkeypress="if(event.keyCode=='13') {closeBtn(event); return false;}"
+                        onclick="closeBtn(event)">닫는 버튼</button>
                         <dt>
                             <h3>석류 오리지널</h3>
                             <p>Pomegranate Tea</p>
@@ -234,13 +240,14 @@
                         </dd>
                     </dl>
                 </li>
-                <li>
+                <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} " onclick="clickEventHandler(event)">
                     <figure>
                         <div class="img-box"><img aria-labelledby="pomegranateapplelime" src="" alt=""></div>
                         <figcaption id="pomegranateapplelime">석류 애플라임</figcaption>
                     </figure>
                     <dl>
-                        <button class="closedl-btn"></button>
+                              <button class="close-dl-btn" onkeypress="if(event.keyCode=='13') {closeBtn(event); return false;}"
+                        onclick="closeBtn(event)">닫는 버튼</button>
                         <dt>
                             <h3>석류 애플라임</h3>
                             <p>Pomegranate Apple Lime</p>
@@ -267,5 +274,16 @@
         </section>
     </main>
     <!-- 메인 끝 -->
+    <script>
+         function clickEventHandler(e)
+        {   
+            e.target.classList.toggle("active");
+        }
+        function closeBtn(e)
+        {
+            const ppp = e.target.offsetParent.offsetParent.offsetParent;
+            ppp.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

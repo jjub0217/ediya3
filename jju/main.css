@@ -1,4 +1,5 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +9,12 @@
 
 /* 숨김 컨텐츠 */
 .a11yhidden {
-   position: absolute !important;
-   top: -9999px;
-   clip: rect(0,0,0,0);
-   width: 1px;
-   height: 1px;
-   margin: -1px;
+    position: absolute !important;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 header {
@@ -23,16 +24,168 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: yellow;
+    padding: 10px;
+    border-bottom: 1px solid #D8D8D8;
 }
-header img {
-    width: 150px;
-}
-.navigation {
-display: none;
-}
-.open-btn,.close-btn {
-    position: absolute;
-    top:10px;
-    right: 10px;
 
+.navigation {
+    display: none;
+    /*임시*/
 }
+
+.container {}
+
+.container li {
+    width: 400px;
+    height: 360px;
+    /* text-align: center; */
+    border-bottom: 1px solid black;
+    margin: 15px;
+    padding: 15px;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+ul {
+    padding: 10px;
+}
+
+
+figure {
+    font-size: 17px;
+    color: #2E2E2E;
+}
+
+figure img {
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+figure .img-box,
+figcaption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li:hover img {
+    transform: scale(1);
+}
+
+dl {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 25px 20px 20px 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+li dl dt {
+    line-height: 1.1;
+}
+
+li dl dt h3 {
+    font-weight: 400;
+}
+
+li dl dt p {
+    font-size: 13px;
+    color: #999999;
+}
+
+li dl hr {
+    border-bottom: 0;
+    border-top: 1px solid black;
+    margin: 10px 0;
+}
+
+.nutrient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+}
+
+.nutrient-box p {
+    display: inline-block;
+    width: 65px;
+    line-height: 19px;
+}
+
+.nutrient-box small {
+    display: inline-block;
+    width: 70px;
+    line-height: 19px;
+    position: relative;
+    top: -1px;
+}
+
+.nutrient-box.left {
+    width: 50%;
+    padding-left: 30px;
+    padding-top: 15px;
+}
+.nutrient-box.left::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 50%;
+    width: 1px;
+    height: 60px;
+    background-color: #cccccc;
+}
+
+.nutrient-box.right {
+    width: 40%;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+/* table {
+    background-color: skyblue;
+    color: #424242;
+    font-size: 14px;
+    position: relative;
+    height: 70px;
+}
+.table-left {
+    position: absolute;
+    bottom: 20px;
+    float: left;
+}
+.table-left,
+td:nth-child(1) {
+    text-align: left;
+    width: 140px;
+}
+
+.table-left td:nth-child(2) {
+    text-align: left;
+    width: 50px;
+}
+.table-right {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    float: right;
+}
+
+.table-right,
+td:nth-child(1) {
+    text-align: left;
+    width: 140px;
+}
+
+.table-right td:nth-child(2) {
+    text-align: left;
+    width: 50px;
+} */

@@ -46,6 +46,7 @@
     <main>
         <h2 class="a11yhidden">메인</h2>
         <section class="container">
+            <h2 class="a11yhidden">커피 메뉴</h2>
             <ul>
                 <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} "
                     onclick="clickEventHandler(event)">
@@ -80,9 +81,13 @@
                                 <p>(0mg)</p>
                             </div>
                         </dd>
+                        <dd class="close-btn-dd">
+                            <button class="close-dl-btn"
+                                onkeypress="if(event.keyCode=='13') {closeBtn(event); return false;}"
+                                onclick="closeBtn(event)" aria-labelledby="pomegranateapplelime">정보 닫기</button>
+                        </dd>
                     </dl>
-                    <button class="close-dl-btn" onkeypress="if(event.keyCode=='13') {closeBtn(event); return false;}"
-                        onclick="closeBtn(event)" aria-labelledby="pomegranateapplelime">정보 닫기</button>
+
                 </li>
             </ul>
         </section>

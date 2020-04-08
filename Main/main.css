@@ -166,6 +166,7 @@ header.active .navigation {
     background-size: 30px;
     background-position: center;
     margin: 15px;
+    cursor: pointer;
 }
 
 /* 헤더 영역 끝 */
@@ -217,7 +218,10 @@ figure {
     color: #2E2E2E;
     pointer-events: none;
 }
-
+li.active:hover figure img
+{
+    transform: scale(0.9);
+}
 figure img {
     transform: scale(0.9);
     transition: all 0.3s ease-in-out;

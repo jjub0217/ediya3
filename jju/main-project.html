@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
+    <div id="curtain">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="container">
+
+        </div>
+        <div class="curtain-toggle" onclick="curtaintoggle()"></div>
+    </div>
     <header>
         <h1 class="logo"><a href="https://www.ediya.com/"><img src="./SVG/multicampus.svg" alt="이디야"></a></h1>
         <button type="button" title="메뉴열기" class="open-btn">버튼
@@ -275,6 +291,11 @@
     </main>
     <!-- 메인 끝 -->
     <script>
+        function curtaintoggle()
+        {
+            const curtain = document.getElementById("curtain");
+            curtain.classList.toggle("active");
+        }
          function clickEventHandler(e)
         {   
             e.target.classList.toggle("active");

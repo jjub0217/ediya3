@@ -1,9 +1,12 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+/* 리셋 css */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Spoqa Han Sans', 'Sans-serif';
 }
+/* 리셋 css 끝 */
 
 /* 숨김 컨텐츠 */
 .a11yhidden {
@@ -14,7 +17,9 @@
     height: 1px;
     margin: -1px;
 }
+/* 숨김 컨텐츠  끝*/
 
+/* 헤더 영역 */
 header {
     position: fixed;
     top:0;
@@ -36,6 +41,9 @@ header h1 img {
     display: none;
     /*임시*/
 }
+/* 헤더 영역 끝 */
+
+/* 메인 영역 */
 main {
     margin-top: 80px;
 }
@@ -62,15 +70,16 @@ ul {
     cursor: pointer;
     list-style: none;
 }
+.container li:hover img {
+    transform: scale(1);
+}
 .container li:focus {
     outline: none;
 }
 ul {
     padding: 10px;
-
 }
-
-
+/* 피겨 영역 */
 figure {
     font-size: 17px;
     color: #2E2E2E;
@@ -81,19 +90,16 @@ figure img {
     transform: scale(0.9);
     transition: all 0.3s ease-in-out;
 }
-
 figure .img-box,
 figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* 피겨 영역 끝 */
 
-li:hover img {
-    transform: scale(1);
-}
 
-li.active dl {
+li.active dl { /* 자바스크립트로 카드 오픈 */
     display: block;
     border: 1px solid #D8D8D8;
     background-color: rgba(255, 255, 255, 0.6);
@@ -101,6 +107,7 @@ li.active dl {
     transition: none;
     z-index: 1;
 }
+/* dl 영역 */
 dl {
     position: absolute;
     width: 100%;
@@ -131,7 +138,6 @@ dl {
 box-shadow: 0px 0px 0 20px#F2F2F2;
 background-color:#F2F2F2;
 }
-
 li dl dt {
     line-height: 1.2;
     margin-top: 20px;
@@ -160,7 +166,6 @@ li dl hr {
     border-top: 1px solid black;
     margin: 20px 0;
 }
-
 .nutrient {
     position: absolute;
     bottom: 0;
@@ -173,13 +178,11 @@ li dl hr {
     justify-content: center;
     background-color: #f8f8f8;
 }
-
 .nutrient-box p {
     display: inline-block;
     width: 69px;
     line-height: 19px;
 }
-
 .nutrient-box small {
     display: inline-block;
     width: 65px;
@@ -187,13 +190,11 @@ li dl hr {
     position: relative;
     top: -1px;
 }
-
 .nutrient-box.left {
     width: 50%;
     padding-left: 30px;
     padding-top: 15px;
 }
-
 .nutrient-box.left::after {
     content: "";
     position: absolute;
@@ -203,53 +204,14 @@ li dl hr {
     height: 60px;
     background-color: #cccccc;
 }
-
 .nutrient-box.right {
     width: 40%;
     padding-left: 20px;
     padding-top: 15px;
 }
+/* dl 영역 끝*/
+/* 메인 영역 끝 */
 
-/* table {
-    background-color: skyblue;
-    color: #424242;
-    font-size: 14px;
-    position: relative;
-    height: 70px;
-}
-.table-left {
-    position: absolute;
-    bottom: 20px;
-    float: left;
-}
-.table-left,
-td:nth-child(1) {
-    text-align: left;
-    width: 140px;
-}
-
-.table-left td:nth-child(2) {
-    text-align: left;
-    width: 50px;
-}
-.table-right {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    float: right;
-}
-
-.table-right,
-td:nth-child(1) {
-    text-align: left;
-    width: 140px;
-}
-
-.table-right td:nth-child(2) {
-    text-align: left;
-    width: 50px;
-} */
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 /* 커튼 영역 */
 #curtain
 {

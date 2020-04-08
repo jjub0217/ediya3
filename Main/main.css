@@ -1,4 +1,5 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
 /* 리셋 css */
 * {
     margin: 0;
@@ -6,6 +7,7 @@
     box-sizing: border-box;
     font-family: 'Spoqa Han Sans', 'Sans-serif';
 }
+
 /* 리셋 css 끝 */
 
 /* 숨김 컨텐츠 */
@@ -17,12 +19,13 @@
     height: 1px;
     margin: -1px;
 }
+
 /* 숨김 컨텐츠  끝*/
 
 /* 헤더 영역 */
 header {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 80px;
@@ -34,31 +37,150 @@ header {
     background-color: rgba(255, 255, 255, 0.4);
     z-index: 100000;
 }
+
+header.active h1 img {
+    filter: blur(2px);
+}
+
 header h1 img {
     margin-left: 20px;
+    margin-top: 20px;
 }
+
+.open-btn {
+    border: none;
+    background-color: transparent;
+    text-indent: -9999px;
+    position: absolute;
+    width: 70px;
+    height: 80px;
+    right: 0;
+    cursor: pointer;
+}
+
+header.active .open-btn::before {
+    transform: rotate(360deg) translateY(15px);
+
+}
+
+header.active .open-btn::after {
+    transform: rotate(-360deg) translateY(-15px);
+ 
+}
+
+.open-btn::before {
+    transition: 1s;
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 4px;
+    background-color: black;
+    top: 30px;
+    right: 20px;
+    box-shadow: 0 10px 0 0 black;
+}
+
+.open-btn::after {
+    transition: 1s;
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 4px;
+    bottom: 25px;
+    right: 20px;
+    background-color: black;
+
+}
+
+.open-btn:hover {
+    background-color: #f0eeee;
+}
+
+header.active ul {
+    display: block; 
+}
+header.active .navigation {
+    transform: translate(0);
+}
+/* 네비게이션 영역 시작 */
 .navigation {
-    display: none;
-    /*임시*/
+    /* background-color: red; */
+    background-color: rgba(20, 24, 44, 0.92);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: 0.3s;
 }
+
+.navigation ul {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.navigation ul li {
+    list-style: none;
+    width: 100%;
+    border-bottom: 1px solid rgb(34, 34, 105);
+}
+
+.navigation ul li a:focus {
+    background-color: #233d84;
+}
+
+.navigation ul li a:hover {
+    background-color: #233d84;
+    transition: 0.5s ease-in-out;
+}
+
+.navigation ul li:nth-child(1) {
+    margin-top: 57px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    display: block;
+    padding: 13.5px 16px;
+    color: #fff;
+}
+
+.close-btn {
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/SVG/Close.svg);
+    filter: invert(1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-indent: -99999px;
+    border: none;
+    background-color: transparent;
+    z-index: 20;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    margin: 15px;
+}
+
 /* 헤더 영역 끝 */
 
 /* 메인 영역 */
 main {
     margin-top: 80px;
 }
-.container {
-    width: 100%;
-}
-ul {
-    width:1000px;
-    /* background-color: skyblue; */
+
+main .container {
+    width: 1000px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+
 }
+
 .container li {
     width: 400px;
     height: 360px;
@@ -70,15 +192,25 @@ ul {
     cursor: pointer;
     list-style: none;
 }
+
 .container li:hover img {
     transform: scale(1);
 }
-.container li:focus {
+
+/* .container li:focus {
     outline: none;
-}
-ul {
+} */
+
+main ul {
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
+
 /* 피겨 영역 */
 figure {
     font-size: 17px;
@@ -90,22 +222,25 @@ figure img {
     transform: scale(0.9);
     transition: all 0.3s ease-in-out;
 }
+
 figure .img-box,
 figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* 피겨 영역 끝 */
 
-
-li.active dl { /* 자바스크립트로 카드 오픈 */
+/* 자바스크립트로 카드 오픈 */
+li.active dl {
     border: 1px solid #D8D8D8;
     background-color: rgba(255, 255, 255, 0.6);
     opacity: 1;
     transition: none;
     z-index: 1;
 }
+
 /* dl 영역 */
 dl {
     position: absolute;
@@ -117,54 +252,55 @@ dl {
     opacity: 0;
     z-index: -1;
     pointer-events: none;
-    /* background-color: rgba(255, 255, 255, 0.6); */
     transition: 0.4s;
 }
+
+li dl dt {
+    line-height: 1.2;
+    margin-top: 20px;
+    pointer-events: all;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
+
+li dl dt .dt-title {
+    font-weight: 400;
+    width: 70%;
+    color: #424242;
+    letter-spacing: 2px;
+}
+
+li dl .summary {
+    pointer-events: all;
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+li dl dt p:nth-child(2) {
+    font-size: 13px;
+    color: #999999;
+}
+
 .close-dl-btn {
     background-image: url(../img/SVG/Close.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 20px;
     background-position: center;
     padding: 9px 14px;
     border: none;
     background-color: transparent;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 0px;
+    top: 0px;
     cursor: pointer;
+    text-indent: -99999px;
+    pointer-events: all;
 }
+
 .close-dl-btn:hover {
-box-shadow: 0px 0px 0 20px#F2F2F2;
-background-color:#F2F2F2;
-}
-li dl dt {
-    line-height: 1.2;
-    margin-top: 20px;
-    pointer-events: all;
+    background-color: #f0eeee;
 }
 
-li dl dt h3 {
-    font-weight: 400;
-    width: 70%;
-    color: #424242;
-    letter-spacing: 2;
-}
-
-li dl dd {
-    pointer-events: all;
-    font-size: 16px;
-}
-
-li dl dt p {
-    font-size: 13px;
-    color: #999999;
-}
-
-li dl hr {
-    border-bottom: 0;
-    border-top: 1px solid black;
-    margin: 20px 0;
-}
 .nutrient {
     position: absolute;
     bottom: 0;
@@ -177,16 +313,19 @@ li dl hr {
     justify-content: center;
     background-color: #f8f8f8;
 }
+
 .nutrient-box p {
     display: inline-block;
     width: 65px;
     line-height: 19px;
 }
+
 .nutrient-box.left {
     width: 50%;
     padding-left: 30px;
     padding-top: 15px;
 }
+
 .nutrient-box.left::after {
     content: "";
     position: absolute;
@@ -196,17 +335,18 @@ li dl hr {
     height: 60px;
     background-color: #cccccc;
 }
+
 .nutrient-box.right {
     width: 40%;
     padding-left: 20px;
     padding-top: 15px;
 }
+
 /* dl 영역 끝*/
 /* 메인 영역 끝 */
 
 /* 커튼 영역 */
-#curtain
-{
+#curtain {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -219,8 +359,8 @@ li dl hr {
     z-index: 10000;
     pointer-events: none;
 }
-#curtain span
-{
+
+#curtain span {
     position: absolute;
     top: 0;
     left: 0;
@@ -231,136 +371,137 @@ li dl hr {
     transition: 0.5s ease-in-out;
     transform: rotate(-90deg);
 }
-#curtain span:nth-child(1)
-{
+
+#curtain span:nth-child(1) {
     /* background: #ff1f6b; */
     background: #ff0000;
     transform: rotate(-90deg);
     transition-delay: 0.9s;
 }
-#curtain span:nth-child(2)
-{
+
+#curtain span:nth-child(2) {
     /* background: #219dff; */
     background: #ff6600;
     transform: rotate(-90deg);
     transition-delay: 0.8s;
 }
-#curtain span:nth-child(3)
-{
+
+#curtain span:nth-child(3) {
     /* background: #111; */
     background: #ffe600;
     transform: rotate(-90deg);
     transition-delay: 0.7s;
 }
-#curtain span:nth-child(4)
-{
+
+#curtain span:nth-child(4) {
     /* background: #111; */
     background: #5eff00;
     transform: rotate(-90deg);
     transition-delay: 0.6s;
 }
-#curtain span:nth-child(5)
-{
+
+#curtain span:nth-child(5) {
     /* background: #111; */
     background: #00a2ff;
     transform: rotate(-90deg);
     transition-delay: 0.5s;
 }
-#curtain span:nth-child(6)
-{
+
+#curtain span:nth-child(6) {
     /* background: #ff1f6b; */
     background: #6200ff;
     transform: rotate(-90deg);
     transition-delay: 0.4s;
 }
-#curtain span:nth-child(7)
-{
+
+#curtain span:nth-child(7) {
     /* background: #219dff; */
     background: #b700ff;
     transform: rotate(-90deg);
     transition-delay: 0.3s;
 }
-#curtain span:nth-child(8)
-{
+
+#curtain span:nth-child(8) {
     /* background: #111; */
     background: #ff00bf;
     transform: rotate(-90deg);
     transition-delay: 0.2s;
 }
-#curtain span:nth-child(9)
-{
+
+#curtain span:nth-child(9) {
     /* background: #111; */
     background: #ff0062;
     transform: rotate(-90deg);
     transition-delay: 0.1s;
 }
-#curtain span:nth-child(10)
-{
+
+#curtain span:nth-child(10) {
     /* background: #111; */
     background: #00eeff;
     transform: rotate(-90deg);
     transition-delay: 0;
 }
-#curtain.active span:nth-child(1)
-{
+
+#curtain.active span:nth-child(1) {
     z-index: 1;
     transition-delay: 0s;
     transform: rotate(0deg);
 }
-#curtain.active span:nth-child(2)
-{
+
+#curtain.active span:nth-child(2) {
     z-index: 2;
     transition-delay: 0.1s;
     transform: rotate(0deg);
 }
-#curtain.active span:nth-child(3)
-{
+
+#curtain.active span:nth-child(3) {
     z-index: 3;
     transition-delay: .2s;
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
 }
-#curtain.active span:nth-child(4)
-{
+
+#curtain.active span:nth-child(4) {
     z-index: 4;
     transition-delay: .3s;
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
 }
-#curtain.active span:nth-child(5)
-{
+
+#curtain.active span:nth-child(5) {
     z-index: 5;
     transition-delay: .4s;
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
 }
-#curtain.active span:nth-child(6)
-{
+
+#curtain.active span:nth-child(6) {
     z-index: 6;
     transition-delay: 0.5s;
     transform: rotate(0deg);
 }
-#curtain.active span:nth-child(7)
-{
+
+#curtain.active span:nth-child(7) {
     z-index: 7;
     transition-delay: 0.6s;
     transform: rotate(0deg);
 }
-#curtain.active span:nth-child(8)
-{
+
+#curtain.active span:nth-child(8) {
     z-index: 8;
     transition-delay: .7s;
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
 }
-#curtain.active span:nth-child(9)
-{
+
+#curtain.active span:nth-child(9) {
     z-index: 9;
     transition-delay: .8s;
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
 }
-#curtain.active span:nth-child(10)
-{
+
+#curtain.active span:nth-child(10) {
     z-index: 10;
     transition-delay: .9s;
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
 }
+
 .curtain-toggle {
     position: absolute;
     bottom: 20px;
@@ -372,6 +513,7 @@ li dl hr {
     margin: 15px;
     z-index: 10000000;
 }
+
 .curtain-toggle:before {
     content: "";
     position: absolute;
@@ -383,6 +525,7 @@ li dl hr {
     box-shadow: 0 10px 0 #ff1f6b;
     transition: 0.5s;
 }
+
 .curtain-toggle:after {
     content: "";
     position: absolute;
@@ -393,32 +536,33 @@ li dl hr {
     z-index: 1;
     transition: 0.5s;
 }
-#curtain.active .curtain-toggle::before
-{
+
+#curtain.active .curtain-toggle::before {
     box-shadow: none;
     background: rgb(0, 0, 0);
     transform: translateY(10px) rotate(45deg);
 }
-#curtain.active .curtain-toggle::after
-{
+
+#curtain.active .curtain-toggle::after {
     transform: translateY(-10px) rotate(-45deg);
     background: rgb(0, 0, 0);
 }
-#curtain .container
-{
+
+#curtain .container {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 100;
-    transition: 0.5;
+    transition: 0.5s;
     visibility: hidden;
     opacity: 0;
     transition-delay: 0s;
 }
-#curtain.active .container
-{
+
+#curtain.active .container {
     visibility: visible;
     opacity: 1;
     transition-delay: 1.2s;
 }
+
 /* 커튼 끝 */

@@ -100,7 +100,6 @@ figcaption {
 
 
 li.active dl { /* 자바스크립트로 카드 오픈 */
-    display: block;
     border: 1px solid #D8D8D8;
     background-color: rgba(255, 255, 255, 0.6);
     opacity: 1;
@@ -180,15 +179,8 @@ li dl hr {
 }
 .nutrient-box p {
     display: inline-block;
-    width: 69px;
-    line-height: 19px;
-}
-.nutrient-box small {
-    display: inline-block;
     width: 65px;
     line-height: 19px;
-    position: relative;
-    top: -1px;
 }
 .nutrient-box.left {
     width: 50%;

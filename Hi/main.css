@@ -120,21 +120,26 @@ dl {
     background-size: cover;
     background-position: center;
     padding: 9px 14px;
+    text-indent: 50px;
+    overflow: hidden;
+    white-space: nowrap;
     border: none;
     background-color: transparent;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 .close-dl-btn:hover {
 box-shadow: 0px 0px 0 20px#F2F2F2;
-background-color:#F2F2F2;
+background-color: #2e2e2e;
 }
 
 li dl dt {
     line-height: 1.2;
-    margin-top: 20px;
+    margin: 20px 0;
     pointer-events: all;
 }
 
@@ -144,7 +149,11 @@ li dl dt h3 {
     color: #424242;
     letter-spacing: 2;
 }
-
+/* .summary {
+    border-top: 1px solid black;
+    padding-top: 20px;
+    display: block;
+} */
 li dl dd {
     pointer-events: all;
     font-size: 16px;
@@ -155,11 +164,11 @@ li dl dt p {
     color: #999999;
 }
 
-li dl hr {
+/* li dl hr {
     border-bottom: 0;
     border-top: 1px solid black;
     margin: 20px 0;
-}
+} */
 
 .nutrient {
     position: absolute;
@@ -205,7 +214,7 @@ li dl hr {
 }
 
 .nutrient-box.right {
-    width: 40%;
+    width: 50%;
     padding-left: 20px;
     padding-top: 15px;
 }

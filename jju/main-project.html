@@ -34,6 +34,7 @@
             <h2 class="a11yhidden" id="nav">네비게이션
             </h2>
             <ul>
+                <li><a tabindex="-1" href="#" id="firstitem" onkeydown="this.blur()" style="outline: none; pointer-events: none;"></a></li>
                 <li><a href="#">메뉴</a></li>
                 <li><a href="#">이디야멤버스</a></li>
                 <li><a href="#">이디야커피랩</a></li>
@@ -394,6 +395,42 @@
     </main>
     <!-- 메인 끝 -->
     <script>
+        const close_btn = document.querySelector(".close-btn")
+        const li_first = document.getElementById("firstitem");
+
+        close_btn.addEventListener("keydown", li_firstFocus);
+        function li_firstFocus(e)
+        {
+            if(e.keyCode === 9)
+            {
+                li_first.focus()
+            }
+            else
+            {
+                return false;
+            }
+        }
+        window.addEventListener('keydown', esc);
+        function esc(e)
+        {
+            if (e.keyCode === 27) 
+            {
+                close();
+            }
+        }
+        function close()
+        {
+            const header = document.querySelector("header");
+            if(header.className==="active")
+            {
+                header.classList.remove("active");
+            }
+            else
+            {
+                console.log("not active");
+            }
+        }
+
         function toggle() //버거바 토글 영역
         {
             const header = document.querySelector("header");

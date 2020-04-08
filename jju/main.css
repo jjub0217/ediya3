@@ -55,6 +55,7 @@ header h1 img {
     width: 70px;
     height: 80px;
     right: 0;
+    cursor: pointer;
 }
 
 header.active .open-btn::before {
@@ -75,7 +76,7 @@ header.active .open-btn::after {
     height: 4px;
     background-color: black;
     top: 30px;
-    right: 10px;
+    right: 20px;
     box-shadow: 0 10px 0 0 black;
 }
 
@@ -85,7 +86,7 @@ header.active .open-btn::after {
     width: 40%;
     height: 4px;
     bottom: 25px;
-    right: 10px;
+    right: 20px;
     background-color: black;
 
 }
@@ -195,9 +196,9 @@ main .container {
     transform: scale(1);
 }
 
-.container li:focus {
+/* .container li:focus {
     outline: none;
-}
+} */
 
 main ul {
     padding: 10px;

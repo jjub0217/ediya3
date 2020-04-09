@@ -671,16 +671,16 @@ li.active .close-btn-dd
 /* 커튼 끝 */
 
 /* 메뉴 애니메이션 */
-
 nav ul li a::before
 {
     content: attr(data-text);
     position: absolute;
     overflow: hidden;
-    color: #1bfaad;
+    color: #57c49e;
     white-space: nowrap;
+    width: 0px;
 }
-nav ul:hover li a::before
+/* nav ul:hover li a::before
 {
     animation: animate 0.5s steps(6) forwards;
 }
@@ -694,8 +694,9 @@ nav ul:hover li a::before
     {
         width: 0px;
     }
-}
-nav ul li:hover a::before
+} */
+nav ul li:hover a::before,
+nav ul li a:focus::before
 {
     animation: animateTwo 1s steps(6) forwards;
 }

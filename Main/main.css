@@ -137,6 +137,7 @@ header.active .navigation .close-btn
     list-style: none;
     width: 100%;
     border-bottom: 1px solid rgb(34, 34, 105);
+    position: relative;
 }
 
 .navigation ul li a:focus {
@@ -203,7 +204,7 @@ main .container li:nth-child(8)
 {
   
 }
-/* main .container li:nth-child(1)
+main .container li:nth-child(1)
 {
     transform: translateX(-300%);
     transition-delay: 0s;
@@ -242,7 +243,7 @@ main .container li:nth-child(8)
 {
     transform: translateX(300%) translateY(-300%);
     transition-delay: 3s;
-} */
+}
 main .container li.load:nth-child(1),
 main .container li.load:nth-child(2),
 main .container li.load:nth-child(3),
@@ -662,3 +663,44 @@ li.active .close-btn-dd
 }
 
 /* 커튼 끝 */
+
+/* 메뉴 애니메이션 */
+
+nav ul li a::before
+{
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    color: #1bfaad;
+    white-space: nowrap;
+}
+nav ul:hover li a::before
+{
+    animation: animate 0.5s steps(6) forwards;
+}
+@keyframes animate
+{
+    0%
+    {
+        width: 97.33px;
+    }
+    100%
+    {
+        width: 0px;
+    }
+}
+nav ul li:hover a::before
+{
+    animation: animateTwo 1s steps(6) forwards;
+}
+@keyframes animateTwo
+{
+    0%
+    {
+        width: 0px;
+    }
+    100%
+    {
+        width: 97.33px;
+    }
+}

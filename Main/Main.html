@@ -11,20 +11,6 @@
     <link rel="stylesheet" href="./main.css">
     
     <style>
-        select
-        {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            padding: 5px 10px;
-            border: 2px solid black;
-            z-index: 101010101010101010101010;
-        }
-        select option
-        {
-            background: black;
-            color: white;
-        }
         main .container ul li::before
         {
             content: "";
@@ -223,12 +209,12 @@
             <ul>
                 <!-- <li><a tabindex="-1" href="#" id="firstitem" onkeydown="this.blur()"
                         style="outline: none; pointer-events: none;"></a></li> -->
-                <li><a href="#" id="firstitem">메뉴</a></li>
-                <li><a href="#">이디야멤버스</a></li>
-                <li><a href="#">이디야커피랩</a></li>
-                <li><a href="#">이디야컬쳐랩</a></li>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#" id="lastitem">매장찾기</a></li>
+                <li><a href="https://www.ediya.com/contents/menu_intro.html" data-text="메뉴" id="firstitem">메뉴</a></li>
+                <li><a href="https://www.ediya.com/contents/members_intro.html" data-text="이디야멤버스">이디야멤버스</a></li>
+                <li><a href="https://www.ediya.com/contents/coffee_lab.html" data-text="이디야커피랩">이디야커피랩</a></li>
+                <li><a href="https://www.ediya.com/contents/music_festa.html" data-text="이디야컬쳐랩">이디야컬쳐랩</a></li>
+                <li><a href="https://www.ediya.com/contents/notice.html?tb_name=notice" data-text="공지사항">공지사항</a></li>
+                <li><a href="https://www.ediya.com/contents/find_store.html" data-text="매장찾기" id="lastitem">매장찾기</a></li>
             </ul>
             <button type="button" title="메뉴닫기" class="close-btn" aria-labelledby="nav" onclick="toggle()">닫기</button>
         </nav>
@@ -450,7 +436,7 @@
                     </figure>
                     <dl>
                         <dt>
-                            <p class="dt-title">제 블라썸</p>
+                            <p class="dt-title">제주청귤 블라썸</p>
                             <p>Jeju Green Tangerine Blossom</p>
                         </dt>
                         <dd class="summary">
@@ -564,18 +550,7 @@
             </ul>
         </section>
     </main>
-    <select id="sourcelist">
-        <option selected id="#">자료 목록</option>
-        <option id="Main">메인</option>
-        <option id="Anim">애니메이션</option>
-    </select>
     <!-- 메인 끝 -->
-    <script>
-        document.getElementById('sourcelist').addEventListener('change', function(e){
-        var dropdown = document.getElementById('sourcelist');
-        window.location.href = dropdown.options[dropdown.selectedIndex].getAttribute('id') + '.html';
-    });
-    </script>
     <script>
         const close_btn = document.querySelector(".close-btn")
         const li_first = document.getElementById("firstitem");
@@ -644,7 +619,12 @@
             const ppp = e.target.offsetParent.parentNode;
             ppp.classList.toggle("active");
         }
-
+        window.onload = function()
+        {
+            console.log(mainli)
+            header.classList.toggle("load");
+            Array.from(mainli).forEach(card => card.classList.toggle("load"));
+        }
     </script>
 </body>
 

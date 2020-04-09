@@ -8,9 +8,18 @@
     align-items: center;
     background:#31287C;
     /* transform: translateX(-100%) rotate(45deg); */
-    clip-path: circle(50%);
+    clip-path: circle(12%);
     transition: 1s ease-in-out;
+    margin: 0 auto;
     box-shadow: inset 0px 0px 300px 20px rgb(255, 255, 255);
+}
+.imgcontainer:hover
+{
+    clip-path: circle(100%);
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: inset 0px 0px 300px 20px rgb(0, 255, 255);
+    width: 65%;
+    border-radius: 50px;
 }
 .imgcontainer .wave
 {
@@ -18,7 +27,7 @@
     width: 100%;
     height: 100px;
     background: url(../img/wave.png);
-    filter: drop-shadow(0px 0px 15px rgb(0, 225, 255));
+    filter: drop-shadow(0px 0px 5px rgb(0, 225, 255));
     background-size: 1000px 100px;
 }
 .imgcontainer .wave.wave1
@@ -119,8 +128,8 @@
     color: transparent;
     -webkit-text-stroke: 2px #000000;
     -webkit-background-clip: text;
-    /* background-image: url(https://cdn.pixabay.com/photo/2016/09/01/19/13/confetti-1637197_960_720.jpg); */
-    background-image: url(https://static.vecteezy.com/system/resources/previews/000/225/625/original/cow-print-seamless-pattern-vector.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2016/09/01/19/13/confetti-1637197_960_720.jpg);
+    /* background-image: url(https://static.vecteezy.com/system/resources/previews/000/225/625/original/cow-print-seamless-pattern-vector.jpg); */
     background-size: 20%;
     /* background-image: url(https://img.freepik.com/free-vector/abstract-colorful-topographic-map-design-vector_1035-14092.jpg?size=626&ext=jpg); */
     background-attachment: fixed;

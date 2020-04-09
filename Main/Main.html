@@ -3,12 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모바일 웹 UI</title>
     <link rel="icon" href="../img/SVG/Symbol.svg">
     <link rel="stylesheet" href="./itemsec.css">
     <link rel="stylesheet" href="./main.css">
+    
     <style>
+        select
+        {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding: 5px 10px;
+            border: 2px solid black;
+            z-index: 101010101010101010101010;
+        }
+        select option
+        {
+            background: black;
+            color: white;
+        }
         main .container ul li::before
         {
             content: "";
@@ -147,7 +163,6 @@
         }
     </style>
 </head>
-
 <body>
     <div id="curtain">
         <span></span>
@@ -435,7 +450,7 @@
                     </figure>
                     <dl>
                         <dt>
-                            <p class="dt-title">제주청귤 블라썸</p>
+                            <p class="dt-title">제 블라썸</p>
                             <p>Jeju Green Tangerine Blossom</p>
                         </dt>
                         <dd class="summary">
@@ -549,26 +564,24 @@
             </ul>
         </section>
     </main>
-        <section class="imgcontainer">
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
-        <div class="wave wave4"></div>
-        <div class="contentbg">
-            <div class="clipBx"></div>
-            <div class="content">
-                <h2><span>EDIYA </span>COFFEE CLONE</h2>
-                <p>개발자</p>
-                <marquee width="200">강주현 류동우 윤유비</marquee>
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore modi vero eligendi tempora temporibus eius architecto numquam molestiae est, nisi, ratione quos aliquam sit suscipit blanditiis odit adipisci asperiores ducimus?</h3>
-            </div>
-        </div>
-    </section>
+    <select id="sourcelist">
+        <option selected id="#">자료 목록</option>
+        <option id="Main">메인</option>
+        <option id="Anim">애니메이션</option>
+    </select>
     <!-- 메인 끝 -->
+    <script>
+        document.getElementById('sourcelist').addEventListener('change', function(e){
+        var dropdown = document.getElementById('sourcelist');
+        window.location.href = dropdown.options[dropdown.selectedIndex].getAttribute('id') + '.html';
+    });
+    </script>
     <script>
         const close_btn = document.querySelector(".close-btn")
         const li_first = document.getElementById("firstitem");
         const lastitem = document.getElementById("lastitem");
+        const mainli = document.querySelectorAll("main ul li");
+        const header = document.querySelector("header");
 
         close_btn.addEventListener("keydown", li_firstFocus);
         li_first.addEventListener("keydown", function(event)
@@ -605,7 +618,6 @@
         }
 
         function close() {
-            const header = document.querySelector("header");
             if (header.className === "active") {
                 header.classList.remove("active");
             } else {
@@ -632,6 +644,7 @@
             const ppp = e.target.offsetParent.parentNode;
             ppp.classList.toggle("active");
         }
+
     </script>
 </body>
 

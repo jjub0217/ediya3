@@ -186,24 +186,23 @@ header.active .navigation .close-btn
 /* 메인 영역 */
 main {
     margin-top: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 main .container {
     width: 1000px;
     margin: 0 auto;
-
 }
-main .container li:nth-child(1),
-main .container li:nth-child(2),
-main .container li:nth-child(3),
-main .container li:nth-child(4),
-main .container li:nth-child(5),
-main .container li:nth-child(6),
-main .container li:nth-child(7),
-main .container li:nth-child(8)
+main .container li:nth-child(odd)
 {
-  
+    box-shadow: -10px 10px 0 0 rgb(206, 206, 206) ;
 }
+main .container li:nth-child(even)
+{
+    box-shadow: 10px 10px 0 0 rgb(206, 206, 206) ;
+}
+
 main .container li:nth-child(1)
 {
     transform: translateX(-300%);
@@ -258,9 +257,10 @@ main .container li.load:nth-child(8)
 
 
 main .container li {
-    width: 400px;
+    /* width: 400px; */
     height: 360px;
     /* text-align: center; */
+    flex: 1 1 35%;
     margin: 15px;
     padding: 15px;
     position: relative;
@@ -301,8 +301,12 @@ li.active:hover figure img
 figure img {
     transform: scale(0.9);
     transition: all 0.3s ease-in-out;
+    min-width: 220px;
+    max-width: 300px;
 }
-
+.img-box {
+    height: 300px;
+}
 figure .img-box,
 figcaption {
     display: flex;
@@ -311,7 +315,9 @@ figcaption {
 }
 figcaption
 {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 피겨 영역 끝 */
@@ -704,3 +710,21 @@ nav ul li:hover a::before
         width: 97.33px;
     }
 }
+@media screen and (max-width: 559px) {
+    .container {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+  }
+  @media screen and (max-height: 1000px) 
+  {
+    .navigation ul li a
+    {
+        padding: 0.75em;
+    }
+    header
+    {
+        height: 50px;
+    }
+  }

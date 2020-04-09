@@ -585,15 +585,18 @@
             }
         }
         window.addEventListener('keydown', esc);
-
         function esc(e) {
             if (e.keyCode === 27) {
                 close();
             }
+            else
+            {
+                return false;
+            }
         }
 
         function close() {
-            if (header.className === "active") {
+            if (header.className == "load active") {
                 header.classList.remove("active");
             } else {
                 console.log("not active");

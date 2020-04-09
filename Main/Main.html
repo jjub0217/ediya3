@@ -6,7 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모바일 웹 UI</title>
     <link rel="icon" href="../img/SVG/Symbol.svg">
+    <link rel="stylesheet" href="./itemsec.css">
     <link rel="stylesheet" href="./main.css">
+    <style>
+        main .container ul li::before
+        {
+            content: "";
+            position: absolute;
+            z-index: -10;
+            top: -14.4px;
+            left: 0;
+            width: 50%;
+            height: 15px;
+            background: #ececec;
+            transform-origin: bottom;
+            transform: skewX(-45deg);
+            transition: 0.3s step-start;
+            border-left: 200px solid #ececec;
+        }
+        /* main .container ul li:hover::before
+        {
+            transition-timing-function: step-start;
+            transform: translate(15px, 374px) skewX(45deg);
+        }
+        main .container ul li:hover::after
+        {
+            transform: skewY(45deg);
+        } */
+        main .container ul li::after
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: -10;
+            right: -15px;
+            width: 15px;
+            height: 44.5%;
+            background: #ececec;
+            transform-origin: left;
+            transform: skewY(-45deg);
+            transition: 0.5s;
+            border-bottom: 200px solid  #ececec;
+        }
+        .logo a
+        {
+            text-decoration: none;
+        }
+        .logo span
+        {
+            color: #31287C;
+            display: inline-block;
+            animation: textanimate 3s ease-in-out infinite;
+            animation-delay: calc(.2s * var(--i));
+        }
+        @keyframes textanimate
+        {
+            0%
+            {
+                transform: translateY(0);
+            }
+            20%
+            {
+                color: rgb(36, 139, 170);
+                transform: translateY(20px) rotateY(360deg);
+            }
+            40%, 100%
+            {
+                color: #31287C;
+                transform: translateY(0);
+            }
+        }
+        #curtain .container 
+        {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+            transform: translateY(100px);
+            animation: curtainOpen 4s ease-in-out forwards;
+        }
+        @keyframes curtainOpen {
+            0%
+            {
+            }
+            100%
+            {
+                transform: translateY(0px);
+            }
+        }
+        #curtain .container .details
+        {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #curtain .container .details .imgBx
+        {
+            width: 20%;
+            height: 10%;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        #curtain .container .details .imgBx img
+        {
+            width: 100%;
+            height: 100%;
+            filter: invert(1);
+        }
+        #curtain .container .content
+        {   
+            position: absolute;
+            top: 15%;
+            left: 25%;
+            text-align: center;
+            font-size: 2.2rem;
+            width: 50vw;
+            margin: 0 auto;
+            color: white;
+        }
+        #curtain .container .content::after
+        {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            left: 45%;
+            width: 10%;
+            height: 5px;
+            background: #9a7349;
+        }
+        #boldtext
+        {
+            font-size: 3rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,33 +161,67 @@
         <span></span>
         <span></span>
         <div class="container">
+            <div class="content">
+                <p>FAST CAMPUS</p>
+                <p id="boldtext">PROJECT</p>
+            </div>
+            <div class="details">
+                <div class="imgBx">
+                    <img src="../img/SVG/html-5.svg" alt="html5 icon">
+                    <p>HTML</p>
+                </div>
+                <div class="imgBx">
+                    <img src="../img/SVG/css.svg" alt="html5 icon">
+                    <p>CSS</p>
+                </div>
+                <div class="imgBx">
+                    <img src="../img/SVG/icon.svg" alt="html5 icon">
+                    <p>JavaScript</p>
+                </div>
 
-        </div>
+            </div>
+        </div>  
         <div class="curtain-toggle" onclick="curtaintoggle()"></div>
     </div>
     <header>
-        <h1 class="logo"><a href="https://www.ediya.com/"><img src="../img/SVG/Logo.svg" alt="이디야카페 공식 홈페이지"></a></h1>
-        <button type="button" title="메뉴열기" class="open-btn" aria-labelledby="nav" onclick="toggle()">열기
-        </button>
+        <h1 class="logo">
+            <a href="https://www.ediya.com/" title="이디야카페 공식 홈페이지">
+                <span style="--i:1;">E</span>
+                <span style="--i:2;">D</span>
+                <span style="--i:3;">I</span> 
+                <span style="--i:4;">Y</span>
+                <span style="--i:5;">A</span>
+                <span></span>
+                <span style="--i:6;">&hearts;</span>
+                <span></span>
+                <span style="--i:7;">C</span>
+                <span style="--i:8;">O</span>
+                <span style="--i:9;">F</span>
+                <span style="--i:10;">F</span>
+                <span style="--i:11;">E</span>
+                <span style="--i:12;">E</span>
+            </a>
+        </h1>
+        <button type="button" title="메뉴열기" class="open-btn" aria-labelledby="nav" onclick="toggle()">열기</button>
         <nav class="navigation">
-            <h2 class="a11yhidden" id="nav">네비게이션
-            </h2>
+            <h2 class="a11yhidden" id="nav">네비게이션</h2>
             <ul>
-                <li><a tabindex="-1" href="#" id="firstitem" onkeydown="this.blur()"
-                        style="outline: none; pointer-events: none;"></a></li>
-                <li><a href="#">메뉴</a></li>
+                <!-- <li><a tabindex="-1" href="#" id="firstitem" onkeydown="this.blur()"
+                        style="outline: none; pointer-events: none;"></a></li> -->
+                <li><a href="#" id="firstitem">메뉴</a></li>
                 <li><a href="#">이디야멤버스</a></li>
                 <li><a href="#">이디야커피랩</a></li>
                 <li><a href="#">이디야컬쳐랩</a></li>
                 <li><a href="#">공지사항</a></li>
-                <li><a href="#">매장찾기</a></li>
+                <li><a href="#" id="lastitem">매장찾기</a></li>
             </ul>
             <button type="button" title="메뉴닫기" class="close-btn" aria-labelledby="nav" onclick="toggle()">닫기</button>
         </nav>
     </header>
     <main>
         <h2 class="a11yhidden">메인</h2>
-        <div class="container">
+        <section class="container">
+            <h2 class="a11yhidden">커피 메뉴</h2>
             <ul>
                 <li tabindex="0" onkeypress="if(event.keyCode=='13') {clickEventHandler(event); return false;} "
                     onclick="clickEventHandler(event)">
@@ -374,19 +547,52 @@
                     </dl>
                 </li>
             </ul>
-        </div>
+        </section>
     </main>
+        <section class="imgcontainer">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+        <div class="contentbg">
+            <div class="clipBx"></div>
+            <div class="content">
+                <h2><span>EDIYA </span>COFFEE CLONE</h2>
+                <p>개발자</p>
+                <marquee width="200">강주현 류동우 윤유비</marquee>
+                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore modi vero eligendi tempora temporibus eius architecto numquam molestiae est, nisi, ratione quos aliquam sit suscipit blanditiis odit adipisci asperiores ducimus?</h3>
+            </div>
+        </div>
+    </section>
     <!-- 메인 끝 -->
     <script>
         const close_btn = document.querySelector(".close-btn")
         const li_first = document.getElementById("firstitem");
+        const lastitem = document.getElementById("lastitem");
 
         close_btn.addEventListener("keydown", li_firstFocus);
-
-        function li_firstFocus(e) {
-            if (e.keyCode === 9) {
-                li_first.focus()
-            } else {
+        li_first.addEventListener("keydown", function(event)
+        {
+            if(event.shiftKey && event.keyCode=="9")
+            {
+                close_btn.focus();
+                event.preventDefault();
+            }
+        });
+        function li_firstFocus(e)
+        {
+            if(e.keyCode === 9 && !e.shiftKey)
+            {
+                li_first.focus();
+                e.preventDefault();
+            }
+            else if(e.shiftKey && e.keyCode === 9)
+            {
+                lastitem.focus();
+                e.preventDefault();
+            }
+            else
+            {
                 return false;
             }
         }

@@ -552,6 +552,13 @@
             </ul>
         </section>
     </main>
+    <section class="imgcontainer">
+        <h2 style="font-size: 4em; color: white; animation: thankyou 1s ease-in-out infinite;">감사합니다!</h2>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </section>
     <!-- 메인 끝 -->
     <script>
         const close_btn = document.querySelector(".close-btn")
@@ -626,9 +633,8 @@
         }
         window.onload = function()
         {
-            console.log(mainli)
             header.classList.toggle("load");
-            Array.from(mainli).forEach(card => card.classList.toggle("load"));
+            Array.from(mainli).forEach(card => card.classList.add("load"));
         }
     </script>
 </body>

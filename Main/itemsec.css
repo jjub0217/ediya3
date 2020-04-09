@@ -1,0 +1,162 @@
+.imgcontainer
+{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#31287C;
+    /* transform: translateX(-100%) rotate(45deg); */
+    clip-path: circle(50%);
+    transition: 1s ease-in-out;
+    box-shadow: inset 0px 0px 300px 20px rgb(255, 255, 255);
+}
+.imgcontainer .wave
+{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: url(../img/wave.png);
+    filter: drop-shadow(0px 0px 15px rgb(0, 225, 255));
+    background-size: 1000px 100px;
+}
+.imgcontainer .wave.wave1
+{
+    animation: Wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+.imgcontainer .wave.wave2
+{
+    animation: Wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+.imgcontainer .wave.wave3
+{
+    animation: Wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+.imgcontainer .wave.wave4
+{
+    animation: Wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+/* @keyframes Wavy
+{
+    0%, 100%
+    {
+        clip-path: polygon(0 40%, 14% 48%, 32% 54%, 46% 57%, 69% 53%, 84% 50%, 100% 48%, 100% 100%, 0% 100%);
+    }
+    50%
+    {
+        clip-path: polygon(0 54%, 14% 50%, 34% 48%, 49% 51%, 65% 50%, 81% 44%, 100% 41%, 100% 100%, 0% 100%);
+    }
+} */
+@keyframes Wave
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+@keyframes Wave2
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+}
+.imgcontainer .contentbg
+{
+    position: absolute;
+    border-radius: 30px;
+    width: 1200px;
+    height: 531px;
+    margin: 0 auto;
+    background: url(https://www.ediya.com/images/common/meta_img.jpg) no-repeat;
+    background-size: cover;
+}
+.imgcontainer .contentbg .clipBx
+{
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    background:rgba(18, 82, 34, 0.425);
+    clip-path: polygon(0 0, 23% 0, 45% 100%, 0% 100%);
+}
+.imgcontainer .contentbg .content
+{
+    position: absolute;
+    top: 12px;
+    left: 7px;
+    color: rgb(0, 0, 0); 
+}
+.imgcontainer .contentbg .content h2
+{
+    font-size: 6em;
+    font-weight: 900;
+    line-height: 1em;
+    color: transparent;
+    -webkit-text-stroke: 2px #000000;
+    -webkit-background-clip: text;
+    /* background-image: url(https://cdn.pixabay.com/photo/2016/09/01/19/13/confetti-1637197_960_720.jpg); */
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/225/625/original/cow-print-seamless-pattern-vector.jpg);
+    background-size: 20%;
+    /* background-image: url(https://img.freepik.com/free-vector/abstract-colorful-topographic-map-design-vector_1035-14092.jpg?size=626&ext=jpg); */
+    background-attachment: fixed;
+}
+.imgcontainer .contentbg .content h2 span
+{
+    margin-right: 20PX;
+    -webkit-text-stroke: 2px #ff7010;
+}
+.imgcontainer .contentbg .content p
+{
+    display: inline-block;
+    color: white;
+    position: relative;
+    font-size: 2em;
+}
+.imgcontainer .contentbg .content p::after
+{
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: white;
+    position: absolute;
+    right: -5px;
+}
+.imgcontainer .contentbg .content marquee
+{
+    vertical-align: bottom;
+    color: white;
+    font-size: 1.4em;
+}
+.imgcontainer .contentbg .content h3
+{
+    margin-top: 50px;
+    font-size: 1.4em;
+    width: 29%;
+    text-align: justify;
+    color: white;
+}

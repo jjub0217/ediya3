@@ -175,13 +175,63 @@
     {
         transition: none !important;
     }
+    .nutrient-box p
+    {
+        max-width: 48% !important;
+    }
     .imgcontainer h2
     {
-        font-size: 2em !important;
+        font-size: 1.6em !important;
     }
     #curtain.active .container 
     {
         top: 50%;
+        height: 100vh !important;
+    }
+    main .container li:nth-child(odd),
+    main .container li:nth-child(even)
+    {
+        box-shadow: -10px 10px 0 0 rgb(206, 206, 206) !important;
+    }
+    #curtain.active .container
+    {
+        width: 100%;
         height: 100vh;
+    }
+    #curtain span:nth-child(10) {
+        /* background: #111; */
+        top: 0 !important;
+        background: rgb(0, 0, 0) !important;
+        transform: rotate(-90deg);
+        transition-delay: 0.1s;
+    }
+    #curtain .container
+    {
+        width: 100%;
+        top: 0% !important;
+    }
+    #curtain .container .details
+    {
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+    }
+    
+    #curtain .container .details .imgBx
+    {
+        margin-top: 30%;
+    }
+    #curtain .container .details p
+    {
+        width: 100%;
+        font-size: 0.5em !important;
+    }
+    #curtain .container .content::after
+    {
+        bottom: -10% !important;
+        left: 5% !important;
+        width: 100% !important;
+        background: white !important;
     }
 }

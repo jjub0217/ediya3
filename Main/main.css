@@ -258,7 +258,8 @@ main .container li.load:nth-child(8)
 }
 
 
-main .container li {
+/* 아이템 리스트 */
+main .container li { 
     /* width: 400px; */
     height: 360px;
     /* text-align: center; */

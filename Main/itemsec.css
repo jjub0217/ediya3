@@ -169,3 +169,19 @@
     text-align: justify;
     color: white;
 }
+@media (max-width:1000px)
+{
+    main ul li
+    {
+        transition: none !important;
+    }
+    .imgcontainer h2
+    {
+        font-size: 2em !important;
+    }
+    #curtain.active .container 
+    {
+        top: 50%;
+        height: 100vh;
+    }
+}

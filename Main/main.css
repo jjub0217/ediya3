@@ -607,7 +607,7 @@ li.active .close-btn-dd
 .curtain-toggle {
     position: absolute;
     bottom: 20px;
-    left: 50px;
+    left: 5%;
     width: 40px;
     height: 40px;
     border-radius: 50%;

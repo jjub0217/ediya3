@@ -9,7 +9,7 @@
        <p>FAST CAMPUS</p>
        <p id="boldtext">PROJECT</p>
    </div>
-   ```
+   ``` 
 
    ``` html
     <div class="details">
